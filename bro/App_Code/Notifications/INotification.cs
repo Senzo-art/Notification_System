@@ -5,7 +5,8 @@ using System.Web;
 
 namespace bro.App_Code.Notifications
 {
-    public class INotification
+    public interface INotification
     {
+        string Send(string toUser, string message);
     }
 }

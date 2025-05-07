@@ -186,6 +186,8 @@
   <ItemGroup>
     <Content Include="App_Code\Notifications\EmailNotification.cs" />
     <Content Include="App_Code\Notifications\INotification.cs" />
+    <Content Include="App_Code\Notifications\PushNotification.cs" />
+    <Content Include="App_Code\Notifications\SMSNotification.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

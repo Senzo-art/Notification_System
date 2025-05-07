@@ -5,12 +5,12 @@ using System.Web;
 
 namespace bro.App_Code.Notifications
 {
-    public class EmailNotification : INotification
-    {
+   public class SMSNotification : INotification
+   {
         public string Send(string toUser, string message)
         {
-            return $"[Email to {toUser}]: {message}";
+            return $"[SMS to {toUser}]: {message}";
         }
-
     }
+
 }
