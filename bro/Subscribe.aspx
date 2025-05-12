@@ -17,7 +17,8 @@
                 <asp:CheckBox ID="chkPush" runat="server" Text="Push Notifications" />
             </div>
 
-            <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn btn-primary" OnClick="btnSubscribe_Click" />
+           <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn btn-primary" OnClick="btnSubscribe_Click" />
+
         </div>
     </section>
 </asp:Content>
