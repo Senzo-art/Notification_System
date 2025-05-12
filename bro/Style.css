@@ -72,3 +72,47 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+
+.hero {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+    .hero .btn-primary {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+.featured-games {
+    margin: 50px 0;
+}
+
+.game-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+    .game-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+.subscription {
+    background-color: #28a745;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+

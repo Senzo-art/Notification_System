@@ -2,43 +2,50 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-        </section>
-
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Welcome to GameStore!</h1>
+            <p>Your ultimate destination for the best games, updates, and deals.</p>
+            <a href="#subscribe" class="btn btn-primary">Subscribe for Notifications</a>
         </div>
-    </main>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="featured-games">
+        <div class="container">
+            <h2>Featured Games</h2>
+            <div class="row">
+                <!-- Example Game Item (Repeat for more featured games) -->
+                <div class="col-md-4">
+                    <div class="game-card">
+                        <img src="path_to_game_image.jpg" alt="Game Title" class="game-img" />
+                        <h3>Game Title</h3>
+                        <p>Game Description</p>
+                        <a href="purchase.aspx" class="btn btn-secondary">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Repeat for more games -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="subscribe" class="subscription">
+        <div class="container text-center">
+            <h2>Stay Updated with Game Events & Price Drops!</h2>
+            <p>Sign up to receive notifications about game updates, special events, and exclusive discounts.</p>
+            <a href="subscribe.aspx" class="btn btn-success">Subscribe Now</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   
+    <script type="text/javascript">
+        // JavaScript code to handle logout or other events
+        function logout() {
+            __doPostBack('btnLogout', ''); // This triggers the server-side logout event
+        }
+    </script>
+
 
 </asp:Content>

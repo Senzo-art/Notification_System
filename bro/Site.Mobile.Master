@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <!-- Add Bootstrap CSS in your MasterPage -->
+
+
 </head>
 <body>
     <form id="form1" runat="server">

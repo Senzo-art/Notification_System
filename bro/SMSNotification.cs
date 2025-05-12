@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace bro.App_Code.Notifications
+namespace Notifications
 {
    public class SMSNotification : INotification
    {

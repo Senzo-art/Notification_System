@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace bro
+namespace Notifications
 {
     public class GamePulseDBContext : DbContext
     {

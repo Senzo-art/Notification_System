@@ -6,7 +6,7 @@
     using System.Data.Entity.Validation;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<bro.GamePulseDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<GamePulseDBContext>
     {
         public Configuration()
         {
