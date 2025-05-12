@@ -195,8 +195,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PushNotification.cs" />
-    <Content Include="SMSNotification.cs" />
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,8 +211,10 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="EmailNotification.cs" />
-    <Content Include="INotification.cs" />
+    <Compile Include="PushNotification.cs" />
+    <Compile Include="SMSNotification.cs" />
+    <Compile Include="EmailNotification.cs" />
+    <Compile Include="INotification.cs" />
     <Compile Include="NotificationManager.cs" />
     <Compile Include="Subscribe.aspx.cs">
       <DependentUpon>Subscribe.aspx</DependentUpon>

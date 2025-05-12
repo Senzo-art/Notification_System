@@ -24,7 +24,7 @@
                         <a href="purchase.aspx" class="btn btn-secondary">Buy Now</a>
                     </div>
                 </div>
-                <!-- Repeat for more games -->
+          
             </div>
         </div>
     </section>

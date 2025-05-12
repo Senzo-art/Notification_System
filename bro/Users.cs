@@ -15,6 +15,22 @@ namespace Notifications
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
+        private List<INotification> _subscriptions = new List<INotification>();
+
+        public void Subscribe(INotification notification)
+        {
+            _subscriptions.Add(notification);
+        }
+
+        public string ReceiveMessage(string message)
+        {
+            StringBuilder output = new StringBuilder();
+            foreach (var method in _subscriptions)
+            {
+                output.AppendLine(method.Send(Name, message));
+            }
+            return output.ToString();
+        }
 
         [Required]
         [StringLength(100)]
@@ -32,22 +48,7 @@ namespace Notifications
         public bool NotifyBySMS { get; set; }
         public bool NotifyByPush { get; set; }
 
-        private List<INotification> _subscriptions = new List<INotification>();
-
-        public void Subscribe(INotification notification)
-        {
-            _subscriptions.Add(notification);
-        }
-
-        public string ReceiveMessage(string message)
-        {
-            StringBuilder output = new StringBuilder();
-            foreach (var method in _subscriptions)
-            {
-                output.AppendLine(method.Send(Name, message));
-            }
-            return output.ToString();
-        }
+        
     }
 }
 

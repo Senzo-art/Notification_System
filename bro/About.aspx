@@ -5,7 +5,7 @@
         <div class="container">
             <h2>Browse Games</h2>
 
-            <!-- Filters Section -->
+           
             <div class="row">
                 <div class="col-md-3">
                     <h4>Filter by Genre</h4>
@@ -14,7 +14,7 @@
                         <asp:ListItem Text="Action" Value="Action" />
                         <asp:ListItem Text="Adventure" Value="Adventure" />
                         <asp:ListItem Text="RPG" Value="RPG" />
-                        <!-- Add other genres -->
+                
                     </asp:DropDownList>
                 </div>
                 <div class="col-md-3">
@@ -24,7 +24,7 @@
                         <asp:ListItem Text="PC" Value="PC" />
                         <asp:ListItem Text="PlayStation" Value="PlayStation" />
                         <asp:ListItem Text="Xbox" Value="Xbox" />
-                        <!-- Add other platforms -->
+               
                     </asp:DropDownList>
                 </div>
                 <div class="col-md-3">
@@ -37,9 +37,9 @@
                 </div>
             </div>
 
-            <!-- Game List -->
+        
             <div class="row" id="gameList">
-                <!-- Loop through games dynamically here -->
+              
                 <div class="col-md-4">
                     <div class="game-card">
                         <img src="game_image_url.jpg" class="img-fluid" />
@@ -48,7 +48,7 @@
                         <a href="GameDetails.aspx?gameId=1" class="btn btn-secondary">View Details</a>
                     </div>
                 </div>
-                <!-- Repeat for each game -->
+           
             </div>
         </div>
     </section>

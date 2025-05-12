@@ -5,8 +5,8 @@ using System.Web;
 
 namespace Notifications
 {
-   public class SMSNotification : INotification
-   {
+    public class SMSNotification : INotification
+    {
         public string Send(string toUser, string message)
         {
             return $"[SMS to {toUser}]: {message}";
