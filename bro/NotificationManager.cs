@@ -63,7 +63,7 @@ namespace bro
                     if (user.NotifyBySMS)
                         user.Subscribe(new SMSNotification());
 
-                    // Send the notification
+                   
                     string notificationResult = user.ReceiveMessage(message);
                     Console.WriteLine(notificationResult);
                 }

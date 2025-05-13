@@ -27,9 +27,22 @@ namespace Notifications
             StringBuilder output = new StringBuilder();
             foreach (var method in _subscriptions)
             {
-                output.AppendLine(method.Send(Name, message));
+                string recipient = GetRecipientForNotifier(method);
+                output.AppendLine(method.Send(recipient, message));
             }
             return output.ToString();
+        }
+
+        private string GetRecipientForNotifier(INotification method)
+        {
+            if (method is EmailNotification)
+                return Email;
+            if (method is SMSNotification)
+                return PhoneNumber ?? "UnknownNumber";
+            if (method is PushNotification)
+                return Name; // or device token if available
+
+            return "UnknownRecipient";
         }
 
         [Required]

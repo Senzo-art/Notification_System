@@ -8,6 +8,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using bro.Models;
 using Notifications;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
+using Twilio;
 
 
 namespace bro
@@ -16,8 +19,10 @@ namespace bro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
+
+        
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
@@ -31,6 +36,7 @@ namespace bro
                         NotifyByEmail = chkEmail.Checked,
                         NotifyBySMS = chkSMS.Checked,
                         NotifyByPush = chkPush.Checked,
+                        PhoneNumber = txtPhoneNumber.Text,
                         DateSubscribed = DateTime.Now
                     };
                     db.Subscriptions.Add(subscription);
@@ -62,7 +68,20 @@ namespace bro
                 Response.Write("<script>alert('Error sending email: " + ex.Message + "');</script>");
             }
         }
-       
+
+        public void SendSms(string toPhone, string message)
+        {
+            const string accountSid = "your_twilio_account_sid";
+            const string authToken = "your_twilio_auth_token";
+            TwilioClient.Init(accountSid, authToken);
+
+            var msg = MessageResource.Create(
+                to: new PhoneNumber(toPhone),
+                from: new PhoneNumber("your_twilio_phone_number"),
+                body: message
+            );
+        }
+
 
 
     }

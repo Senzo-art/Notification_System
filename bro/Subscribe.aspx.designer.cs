@@ -51,6 +51,24 @@ namespace bro
         protected global::System.Web.UI.WebControls.CheckBox chkPush;
 
         /// <summary>
+        /// txtPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
+
+        /// <summary>
+        /// txtDeviceId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDeviceId;
+
+        /// <summary>
         /// btnSubscribe control.
         /// </summary>
         /// <remarks>
