@@ -5,8 +5,7 @@ using System.Web;
 using System.Data.Entity;
 using bro.Models;
 
-namespace Notifications
-{
+namespace Notifications { 
     public class GamePulseDBContext : DbContext
     {
         public GamePulseDBContext() : base("name=GamePulseDBContext")

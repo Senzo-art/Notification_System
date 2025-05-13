@@ -211,6 +211,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Migrations\202505131256426_UserAndSubscriptions.cs" />
+    <Compile Include="Migrations\202505131256426_UserAndSubscriptions.Designer.cs">
+      <DependentUpon>202505131256426_UserAndSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Models\Subscriptions.cs" />
     <Compile Include="PushNotification.cs" />
     <Compile Include="SMSNotification.cs" />
@@ -238,7 +243,7 @@
     <Compile Include="GameDetails.aspx.designer.cs">
       <DependentUpon>GameDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GamePulseDBContext.cs" />
+    <Compile Include="Models\GamePulseDBContext.cs" />
     <Compile Include="Games.aspx.cs">
       <DependentUpon>Games.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -256,18 +261,6 @@
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202505071326233_InitialCreate.cs" />
-    <Compile Include="Migrations\202505071326233_InitialCreate.Designer.cs">
-      <DependentUpon>202505071326233_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202505071341141_AddValidationToPassword.cs" />
-    <Compile Include="Migrations\202505071341141_AddValidationToPassword.Designer.cs">
-      <DependentUpon>202505071341141_AddValidationToPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202505071347293_UpdateUserModel.cs" />
-    <Compile Include="Migrations\202505071347293_UpdateUserModel.Designer.cs">
-      <DependentUpon>202505071347293_UpdateUserModel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -284,7 +277,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,7 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -309,14 +300,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202505071326233_InitialCreate.resx">
-      <DependentUpon>202505071326233_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202505071341141_AddValidationToPassword.resx">
-      <DependentUpon>202505071341141_AddValidationToPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202505071347293_UpdateUserModel.resx">
-      <DependentUpon>202505071347293_UpdateUserModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202505131256426_UserAndSubscriptions.resx">
+      <DependentUpon>202505131256426_UserAndSubscriptions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

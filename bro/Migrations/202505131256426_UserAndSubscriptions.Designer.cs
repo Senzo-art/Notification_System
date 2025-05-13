@@ -7,18 +7,18 @@ namespace bro.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class AddValidationToPassword : IMigrationMetadata
+    public sealed partial class UserAndSubscriptions : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddValidationToPassword));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserAndSubscriptions));
         
         string IMigrationMetadata.Id
         {
-            get { return "202505071341141_AddValidationToPassword"; }
+            get { return "202505131256426_UserAndSubscriptions"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

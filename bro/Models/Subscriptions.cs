@@ -7,6 +7,7 @@ using System.Web;
 namespace bro.Models
 {
     public class Subscriptions
+        
     {
         public int Id { get; set; }
 
@@ -18,5 +19,7 @@ namespace bro.Models
         public bool NotifyByEmail { get; set; }
         public bool NotifyBySMS { get; set; }
         public bool NotifyByPush { get; set; }
+        public DateTime DateSubscribed { get; set; }
+
     }
 }

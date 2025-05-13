@@ -6,6 +6,9 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using bro.Models;
+using Notifications;
+
 
 namespace bro
 {
@@ -20,6 +23,20 @@ namespace bro
         {
             try
             {
+                using (var db = new GamePulseDBContext())
+                {
+                    var subscription = new Subscriptions
+                    {
+                        Email = txtEmail.Text,
+                        NotifyByEmail = chkEmail.Checked,
+                        NotifyBySMS = chkSMS.Checked,
+                        NotifyByPush = chkPush.Checked,
+                        DateSubscribed = DateTime.Now
+                    };
+                    db.Subscriptions.Add(subscription);
+                    db.SaveChanges();
+                }
+
                 string to = txtEmail.Text;
                 string subject = "Welcome to SZS Game Pulse!";
                 string body = "Thanks for subscribing! 🎮 You'll now receive game updates, price drops, and more.";
@@ -32,7 +49,7 @@ namespace bro
                 mail.IsBodyHtml = true;
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("siyabongmelissa@gmail.com", "gyeabsmhnmivqlqw");
+                smtp.Credentials = new NetworkCredential("siyabongmelissa@gmail.com", "iwswiecdznirbubq");
                 smtp.EnableSsl = true;
 
                 smtp.Send(mail);

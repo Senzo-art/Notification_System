@@ -48,7 +48,7 @@ namespace Notifications
         public bool NotifyBySMS { get; set; }
         public bool NotifyByPush { get; set; }
 
-        
+
     }
 }
 
