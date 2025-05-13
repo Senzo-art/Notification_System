@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using bro.Models;
 
 namespace Notifications
 {
@@ -13,6 +14,7 @@ namespace Notifications
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Subscriptions> Subscriptions { get; set; }
        
     }
 }
