@@ -15,6 +15,7 @@ namespace bro.Models
         public string Email { get; set; }
 
         public string PhoneNumber { get; set; }
+        public string PushDevice { get; set; }
 
         public bool NotifyByEmail { get; set; }
         public bool NotifyBySMS { get; set; }

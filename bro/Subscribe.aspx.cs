@@ -17,12 +17,7 @@ namespace bro
 {
     public partial class Subscribe : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        
+       
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
@@ -37,6 +32,7 @@ namespace bro
                         NotifyBySMS = chkSMS.Checked,
                         NotifyByPush = chkPush.Checked,
                         PhoneNumber = txtPhoneNumber.Text,
+                        PushDevice = txtPushDevice.Text,
                         DateSubscribed = DateTime.Now
                     };
                     db.Subscriptions.Add(subscription);

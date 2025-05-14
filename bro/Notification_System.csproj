@@ -258,6 +258,10 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202505141003049_AddPushToSubscriptions.cs" />
+    <Compile Include="Migrations\202505141003049_AddPushToSubscriptions.Designer.cs">
+      <DependentUpon>202505141003049_AddPushToSubscriptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotifySubscribers.aspx.cs">
       <DependentUpon>NotifySubscribers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +376,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202505131256426_UserAndSubscriptions.resx">
       <DependentUpon>202505131256426_UserAndSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505141003049_AddPushToSubscriptions.resx">
+      <DependentUpon>202505141003049_AddPushToSubscriptions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

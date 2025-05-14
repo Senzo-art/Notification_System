@@ -23,9 +23,9 @@
                 <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="form-control" Placeholder="Enter your phone number" />
             </div>
 
-            <div class="form-group" id="pushDevice" style="display: none;">
-                <label for="deviceId">Device ID (for Push notifications):</label>
-                <asp:TextBox ID="txtDeviceId" runat="server" CssClass="form-control" Placeholder="Enter your device ID" />
+            <div class="form-group" id="PushDevice" style="display: none;">
+                <label for="PushDevice">Device ID (for Push notifications):</label>
+                <asp:TextBox ID="txtPushDevice" runat="server" CssClass="form-control" Placeholder="Enter your device ID" />
             </div>
 
             <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn btn-primary" OnClick="btnSubscribe_Click" />
